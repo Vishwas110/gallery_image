@@ -1,15 +1,13 @@
 class ImageModel {
-  final String id;
-  final String url;
+  final String previewURL;
   final int likes;
   final int views;
 
-  ImageModel({required this.id, required this.url, required this.likes, required this.views});
+  ImageModel({required this.previewURL, required this.likes, required this.views});
 
   factory ImageModel.fromJson(Map<String, dynamic> json) {
     return ImageModel(
-      id: json['id'],
-      url: json['webformatURL'],
+      previewURL: json['previewURL'],
       likes: json['likes'],
       views: json['views'],
     );
